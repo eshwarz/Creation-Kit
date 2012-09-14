@@ -1,4 +1,4 @@
-Starter::Application.routes.draw do
+Kit::Application.routes.draw do
   
   ActiveAdmin.routes(self)
 
