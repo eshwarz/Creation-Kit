@@ -1,14 +1,27 @@
 - user = current_user
 header
-	.navbar.navbar-fixed-top
+	.navbar.navbar-fixed-top.navbar-inverse
 		.navbar-inner
 			.container.pr
-				= link_to '', root_path, :class => 'logo'
+				= link_to 'Kit', root_path, :class => 'brand'
 				.nav-collapse.collapse
 					ul.nav.fr
 						- if user_signed_in?
-							li.no_bg.mrs= user_image user, 'small', :width => '30', :style => 'padding-top: 8px;'
-							li.welcome_name= full_name user
+							li.dropdown#profile_dropdown
+								a href="#profile_dropdown" class="dropdown-toggle" data-toggle="dropdown"
+									= user_image user, 'small', :width => 20, :class => 'mrs'
+									= full_name user
+									b.caret.mls.mtm
+								ul.dropdown-menu
+									li
+										= link_to 'Action 1', destroy_user_session_path
+									li
+										= link_to 'Action 2', destroy_user_session_path
+									li
+										= link_to 'Action 3', destroy_user_session_path
+									li
+										= link_to 'Sign Out', destroy_user_session_path
+
 							li= link_to 'Home', home_path
 							li= link_to 'About', about_path
 							li= link_to 'Sign Out', destroy_user_session_path

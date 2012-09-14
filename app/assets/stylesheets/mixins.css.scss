@@ -142,3 +142,10 @@
 @mixin ts($px) {
 	text-shadow: $px; 
 }
+
+@mixin transition($time) {
+	transition: all $time linear 0s;
+	-moz-transition: all $time linear 0s;
+	-webkit-transition: all $time linear 0s;
+	-o-transition: all $time linear 0s;
+}

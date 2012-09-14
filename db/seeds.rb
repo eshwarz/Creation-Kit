@@ -7,7 +7,7 @@ if AuthenticationType.count == 0
 	end
 	
 	# Toggling authentication from seeds
-	AuthenticationType.find_by_provider('twitter').update_attributes( :enable => false )
+	# AuthenticationType.find_by_provider('twitter').update_attributes( :enable => false )
 end
 
 # Creating an admin user

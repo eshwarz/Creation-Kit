@@ -9,7 +9,7 @@ gem 'omniauth-linkedin'               # self explained
 gem 'omniauth-facebook'               # self explained
 gem 'omniauth-twitter'                # self explained
 gem 'nifty-generators'                # scaffolding for controllers and views. 
-gem "bootstrap-sass", ">= 2.0.1"      # Bootstrap CSS (actually SASS)
+gem "bootstrap-sass"                  # Bootstrap CSS (actually SASS)
 gem 'jquery-rails'                    # self explained
 gem "haml", ">= 3.1.4"                # view templating engine for haml
 gem "slim-rails"                      # view templating engine for slim
